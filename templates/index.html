@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Parking Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Smart Parking Dashboard</h1>
+    <div class="stats">
+      <div class="card">
+        <h2>Live Occupancy</h2>
+        <p id="liveCount">-- / --</p>
+      </div>
+      <div class="card">
+        <h2>Performance Insights</h2>
+        <p id="performance">Loading...</p>
+      </div>
+    </div>
+
+    <div class="chart-container">
+      <h3>Hourly Flow Rate</h3>
+      <canvas id="flowChart"></canvas>
+    </div>
+
+    <div class="chart-container">
+      <h3>Revenue per Day</h3>
+      <canvas id="revenueChart"></canvas>
+    </div>
+
+    <p class="timestamp" id="timestamp"></p>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
